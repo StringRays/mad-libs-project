@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mad libs</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div class="mainContainer">
+        <h1>Mad Libs Generator</h1>
+        <div class="nounInputCont">
+            <label for="nounInput">Nouns</label>
+            <input type="text" size="10" class="nounInput" id="nounInput" />
+        </div>
+        <div class="verbInputCont">
+            <label for="verbInput">Verbs</label>
+            <input type="text" size="10" class="verbInput" id="verbInput" />
+        </div>
+        <div class="adjectiveInputCont">
+            <label for="adjectiveInput">Adjectives</label>
+            <input type="text" size="10" class="adjectiveInput" id="adjectiveInput" />
+        </div>
+        <div class="adverbInputCont">
+            <label for="adverbInput">Adverbs</label>
+            <input type="text" size="10" class="adverbInput" id="adverbInput" />
+        </div>
+        <div>
+            <button type="button" class="centerButton" onclick="printMadLib()">
+          Make Mad Lib
+            </button>
+        <div class="answerTextCont">
+            <label for="answerText">Answer</label>
+            <input type="text" size="10" class="answerText" id="answerText" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
