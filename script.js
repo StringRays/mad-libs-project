@@ -5,13 +5,13 @@
     let finalVerb = getVerb(wordRegex);
     let finalAdjective = getAdjective(wordRegex);
     let finalAdverb = getAdverb(wordRegex);
-    let strDefault = `This is a noun: ${finalNoun}. This is a verb: ${finalVerb}. This is an adjective: ${finalAdjective}. This is an adverb: ${finalAdverb}.This is a verb: ${finalVerb}.`
-    if ( document.getElementById("answerText").value == false ) {
+    let strDefault = `This is a noun: ${finalNoun}. This is a verb: ${finalVerb}. This is an adjective: ${finalAdjective}. This is an adverb: ${finalAdverb}.`
+     if ( document.getElementById("answerText").value == false ) {
         document.getElementById("answerText").value = strDefault;
-    } else {
+     } else {
         let finalOutput = replaceMadLibs(document.getElementById("answerText").value);
         document.getElementById("answerText").value = finalOutput;
-    }
+     }
 }
 
 //if a word is present, puts all words in array and calls the get random word from array function (repeated for other parts of speech)
@@ -66,28 +66,28 @@ function replaceMadLibs(string) {
     // let regexAdj = /adjective/gi;
     // let regexAdv = /adverb/g;
     let localWordRegex = /[a-z]+/gi;
-    if ( /noun/gi.test(string) == true ) {
-        string = string.replaceAll(/noun/gi, getNoun(localWordRegex));
+    if ( /\*/gi.test(string) == true ) {
+        string = string.replaceAll(/\*/gi, getNoun(localWordRegex));
     }
-    if ( /verb/gi.test(string) == true ) {
-        string = string.replaceAll(/verb/gi, getVerb(localWordRegex));
+    if ( /\&/gi.test(string) == true ) {
+        string = string.replaceAll(/\&/gi, getVerb(localWordRegex));
     }
-    if ( /adjective/gi.test(string) == true ) {
-        string = string.replaceAll(/adjective/gi, getAdjective(localWordRegex));
+    if ( /\$/gi.test(string) == true ) {
+        string = string.replaceAll(/\$/gi, getAdjective(localWordRegex));
     }
-    if ( /adverb/gi.test(string) == true ) {
-        string = string.replaceAll(/adverb/gi, getAdverb(localWordRegex));
+    if ( /\@/gi.test(string) == true ) {
+        string = string.replaceAll(/\@/gi, getAdverb(localWordRegex));
     }
     return string;
 }
 
-console.log("bird dog".replaceAll('bird', 'cat'))
-console.log( /noun/gi.test("noun adjective"))
-let newStr = "noun verb noun"
-if ( /noun/gi.test(newStr) == true ) {
-    newStr = newStr.replaceAll(/noun/gi, "cat");
-}
-console.log(newStr)
+// console.log("bird dog".replaceAll('bird', 'cat'))
+// console.log( /noun/gi.test("noun adjective"))
+// let newStr = "noun verb noun"
+// if ( /noun/gi.test(newStr) == true ) {
+//     newStr = newStr.replaceAll(/noun/gi, "cat");
+// }
+// console.log(newStr)
 
 //I copied this function and replaced the output nodes and it works 
 // function replaceWords(string) {
