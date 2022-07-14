@@ -81,15 +81,26 @@ function replaceMadLibs(string) {
     return string;
 }
 
-// console.log("bird dog".replaceAll('bird', 'cat'))
-// console.log( /noun/gi.test("noun adjective"))
-// let newStr = "noun verb noun"
-// if ( /noun/gi.test(newStr) == true ) {
-//     newStr = newStr.replaceAll(/noun/gi, "cat");
+//this below is practice stuff to debug
+// const regTest = /\*/gi;
+// let newStr = "* verb *";
+// let newArr = ["mouse", "horse"];
+// let replaceArr = newStr.match(regTest);
+// while ( regTest.test(newStr) == true ) {
+    
+    
+//     newStr[newStr.indexOf('*')] = randomNew(newArr);
 // }
+
+// function randomNew(array) { 
+//     let myArr = array
+//     return myArr[Math.floor(Math.random()*2)];
+// }
+
+// newStr[newStr.indexOf('*')] = randomNew(newArr);
 // console.log(newStr)
 
-//I copied this function and replaced the output nodes and it works 
+//I copied this function and replaced the outputand it works 
 // function replaceWords(string) {
 //     // let regexNo = /noun/gi;
 //     // let regexVerb = /verb/gi;
