@@ -77,6 +77,9 @@ function replaceMadLibs(string) {
     return string;
 }
 
+function clearText() {
+    document.getElementById("answerText").value = null;
+}
 //this below is practice stuff to debug
 // const regTest = /\*/gi;
 // let newStr = "* verb *";

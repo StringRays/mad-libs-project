@@ -24,10 +24,14 @@
             <label for="adverbInput">Adverbs</label>
             <input type="text" size="10" class="adverbInput" id="adverbInput" />
         </div>
-        <div>
-            <button type="button" class="centerButton" onclick="printMadLib()">
-          Make Mad Lib
-            </button>
+        <div class="buttonRow">
+          <button type="button" class="leftButton" onclick="printMadLib()">
+            Make Mad Lib
+          </button>
+          <button type="button" class="rightButton" onclick="clearText()">
+            Clear
+          </button>
+        </div>
         <div class="answerTextCont">
             <label for="answerText">Answer</label>
             <input type="text" size="10" class="answerText" id="answerText" />
