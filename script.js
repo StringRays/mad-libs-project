@@ -39,7 +39,10 @@ function getAdjective(regex) {
     let adjectiveString= document.getElementById("adjectiveInput").value;
     if (regex.test(adjectiveString) === true) {
         let adjectiveArray = adjectiveString.match(regex);
+        //put back in maybe? need to figure out how to take this length and 
+        //for ( let cycle = 0; cycle < adjectiveArray.length; cycle++ ) {
         return getRandomFromArray(adjectiveArray);
+        //}
     } else {
         return "(No input given)";
     }
@@ -54,6 +57,8 @@ function getAdverb(regex) {
         return "(No input given)";
     }
 }
+
+
 //gets a random number from 0 to 1 less than length of array, returns word at that index
 function getRandomFromArray(array) {
     let index = Math.floor(Math.random()*array.length);
