@@ -61,10 +61,6 @@ function getRandomFromArray(array) {
 } 
 
 function replaceMadLibs(string) {
-    // let regexNo = /noun/gi;
-    // let regexVerb = /verb/gi;
-    // let regexAdj = /adjective/gi;
-    // let regexAdv = /adverb/g;
     let localWordRegex = /[a-z]+/gi;
     if ( /\*/gi.test(string) == true ) {
         string = string.replaceAll(/\*/gi, getNoun(localWordRegex));
