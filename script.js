@@ -15,30 +15,30 @@
 }
 
 //if a word is present, puts all words in array and calls the get random word from array function (repeated for other parts of speech)
-function getVerb(regex) {
+function getVerb() {
     let verbString= document.getElementById("verbInput").value;
-    if (regex.test(verbString) === true) {
-        let verbArray = verbString.match(regex);
+    if (/[a-z]+/gi.test(verbString) === true) {
+        let verbArray = verbString.match(/[a-z]+/gi);
         return getRandomFromArray(verbArray);
     } else {
         return "(No input given)";
     }
 }
 
-function getNoun(regex) {
+function getNoun() {
     let nounString= document.getElementById("nounInput").value;
-    if (regex.test(nounString) === true) {
-        let nounArray = nounString.match(regex);
+    if (/[a-z]+/gi.test(nounString) === true) {
+        let nounArray = nounString.match(/[a-z]+/gi);
         return getRandomFromArray(nounArray);
     } else {
         return "(No input given)";
     }
 }
 
-function getAdjective(regex) {
+function getAdjective() {
     let adjectiveString= document.getElementById("adjectiveInput").value;
-    if (regex.test(adjectiveString) === true) {
-        let adjectiveArray = adjectiveString.match(regex);
+    if (/[a-z]+/gi.test(adjectiveString) === true) {
+        let adjectiveArray = adjectiveString.match(/[a-z]+/gi);
         //put back in maybe? need to figure out how to take this length and 
         //for ( let cycle = 0; cycle < adjectiveArray.length; cycle++ ) {
         return getRandomFromArray(adjectiveArray);
@@ -48,10 +48,10 @@ function getAdjective(regex) {
     }
 }
 
-function getAdverb(regex) {
+function getAdverb() {
     let adverbString= document.getElementById("adverbInput").value;
-    if (regex.test(adverbString) === true) {
-        let adverbArray = adverbString.match(regex);
+    if (/[a-z]+/gi.test(adverbString) === true) {
+        let adverbArray = adverbString.match(/[a-z]+/gi);
         return getRandomFromArray(adverbArray);
     } else {
         return "(No input given)";
@@ -66,18 +66,17 @@ function getRandomFromArray(array) {
 } 
 
 function replaceMadLibs(string) {
-    let localWordRegex = /[a-z]+/gi;
     if ( /\*/gi.test(string) == true ) {
-        string = string.replaceAll(/\*/gi, getNoun(localWordRegex));
+        string = string.replaceAll(/\*/gi, getNoun());
     }
     if ( /\&/gi.test(string) == true ) {
-        string = string.replaceAll(/\&/gi, getVerb(localWordRegex));
+        string = string.replaceAll(/\&/gi, getVerb());
     }
     if ( /\$/gi.test(string) == true ) {
-        string = string.replaceAll(/\$/gi, getAdjective(localWordRegex));
+        string = string.replaceAll(/\$/gi, getAdjective());
     }
     if ( /\@/gi.test(string) == true ) {
-        string = string.replaceAll(/\@/gi, getAdverb(localWordRegex));
+        string = string.replaceAll(/\@/gi, getAdverb());
     }
     return string;
 }
