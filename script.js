@@ -1,3 +1,22 @@
+///I need to grab how many of each element are in the incoming text, and feed that both to 
+//how many cycles to run to get words, and also figure out how to either iterate into variables to pass to the 
+//string literals, or to break the 
+//how do I say for regex match in string, replace with this function, without saying that? 
+
+//what if I make empty arrays of required length to hold stuff later, pass those arrays to the right function and then for the length
+//of those, replace each element in the array. Or empty array that can hold 7 and push? I might be mixing up data-types still but 
+//either way might be cleaner than what I stated above. 
+
+//after that I'd still have to find a way to combine in with text but ya know, can always use breaking into a bunch of pieces if needed
+
+//just would like to see if maybe I could either skip array stuff and generate output a little more dynamically either with the 
+//function in the string or an array that cycles into it. 
+
+//ooooooh, I could slowly build the string literal by having a function that populates that wooooooord, this might be the winner folks. 
+//
+
+
+
 //sets the regex, grabs a word from each array, and prints the final string with variables inserted
  function printMadLib() {
     let wordRegex = /[a-z]+/gi;
@@ -80,6 +99,10 @@ function replaceMadLibs(string) {
     }
     return string;
 }
+
+
+
+
 
 function clearText() {
     document.getElementById("answerText").value = null;
