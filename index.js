@@ -15,6 +15,18 @@
 //ooooooh, I could slowly build the string literal by having a function that populates that wooooooord, this might be the winner folks. 
 //
 
+// also....could I dump stuff into objects? haven't messed with that much yet other than in practice problems
+
+
+
+
+
+// could I join an array with the results of a loop?????????????
+//then I could output the result of array[index] into ${} 
+
+
+
+
 
 
 //sets the regex, grabs a word from each array, and prints the final string with variables inserted
@@ -103,10 +115,6 @@ function replaceMadLibs(string) {
     }
     return string;
 }
-
-
-
-
 
 function clearText() {
     document.getElementById("answerText").value = null;
