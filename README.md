@@ -17,3 +17,4 @@ If user enters text in the answer box, they can turn it into a mad lib by replac
  - Improve display
  - Store default arrays of answers
  - Import/export elsewhere
+ - Add option to not repeat words(or make that main and option to turn off)
