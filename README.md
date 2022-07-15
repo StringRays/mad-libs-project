@@ -1,4 +1,5 @@
 # Mad Libs Generator
+[Mad Lib Generator](https://stringrays.github.io/mad-libs-project/)
 This generator lets users enter multiple words in given of speech categories. 
 If no text is entered in the answer box, it supplies a default string with one random word from each list. 
 If no input is given for a category the return for that category is (No input given).
