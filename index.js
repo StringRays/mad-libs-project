@@ -26,10 +26,11 @@ function replaceMadLibs(string) {
     return string;
 }
 
+
 //the following four functions check if words were given in the category, and returns a random one if so and (no input given) if not
 function getVerb() {
+    let verbString = document.getElementById("verbInput").value;
     if (/[a-z]+/gi.test(verbString) === true) {
-        let verbString = document.getElementById("verbInput").value;
         let verbArray = verbString.match(/[a-z]+/gi);
         return getRandomFromArray(verbArray);
     } else {
@@ -38,8 +39,8 @@ function getVerb() {
 }
 
 function getNoun() {
+    let nounString= document.getElementById("nounInput").value;
     if (/[a-z]+/gi.test(nounString) === true) {
-        let nounString= document.getElementById("nounInput").value;
         let nounArray = nounString.match(/[a-z]+/gi);
         return getRandomFromArray(nounArray);
     } else {
@@ -48,8 +49,8 @@ function getNoun() {
 }
 
 function getAdjective() {
+    let adjectiveString= document.getElementById("adjectiveInput").value;
     if (/[a-z]+/gi.test(adjectiveString) === true) {
-        let adjectiveString= document.getElementById("adjectiveInput").value;
         let adjectiveArray = adjectiveString.match(/[a-z]+/gi);
         return getRandomFromArray(adjectiveArray);
     } else {
@@ -58,8 +59,8 @@ function getAdjective() {
 }
 
 function getAdverb() {
+    let adverbString= document.getElementById("adverbInput").value;
     if (/[a-z]+/gi.test(adverbString) === true) {
-        let adverbString= document.getElementById("adverbInput").value;
         let adverbArray = adverbString.match(/[a-z]+/gi);
         return getRandomFromArray(adverbArray);
     } else {
