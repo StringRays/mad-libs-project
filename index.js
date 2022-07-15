@@ -1,7 +1,7 @@
 //Prints a defult string with inserted function is no text is given to answerText
  function printMadLib() {
-    let strDefault = `This is a noun: ${getNoun()}. This is a verb: ${getVerb()}. This is an adjective: ${getAdjective()}. This is an adverb: ${getAdverb()}.`
      if ( document.getElementById("answerText").value == false ) {
+        let strDefault = `This is a noun: ${getNoun()}. This is a verb: ${getVerb()}. This is an adjective: ${getAdjective()}. This is an adverb: ${getAdverb()}.`
         document.getElementById("answerText").value = strDefault;
      } else {
         let finalOutput = replaceMadLibs(document.getElementById("answerText").value);
@@ -10,7 +10,6 @@
 }
 
 //***********************************************************
-
 function getVerb() {
     let verbString = document.getElementById("verbInput").value;
     if (/[a-z]+/gi.test(verbString) === true) {
@@ -35,10 +34,7 @@ function getAdjective() {
     let adjectiveString= document.getElementById("adjectiveInput").value;
     if (/[a-z]+/gi.test(adjectiveString) === true) {
         let adjectiveArray = adjectiveString.match(/[a-z]+/gi);
-        //put back in maybe? need to figure out how to take this length and 
-        //for ( let cycle = 0; cycle < adjectiveArray.length; cycle++ ) {
         return getRandomFromArray(adjectiveArray);
-        //}
     } else {
         return "(No input given)";
     }
