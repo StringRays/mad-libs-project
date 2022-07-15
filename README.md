@@ -9,4 +9,3 @@ with a symbol for which part of speech they would like it replaced by.
 ###To Do
 
  - Add description/instructions
- - add function for sentence with more than one word
