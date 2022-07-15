@@ -34,6 +34,10 @@
 }
 
 //if a word is present, puts all words in array and calls the get random word from array function (repeated for other parts of speech)
+//***********************************************************
+//could I combine the guys between this symbol by defining all the strings in one function and passing them 
+//to another function to get the arrays, and that function to a get random? 
+//better question is, is that more or less energy/data storage design wise?  */
 function getVerb() {
     let verbString= document.getElementById("verbInput").value;
     if (/[a-z]+/gi.test(verbString) === true) {
@@ -77,7 +81,7 @@ function getAdverb() {
     }
 }
 
-
+//***************************************************** */
 //gets a random number from 0 to 1 less than length of array, returns word at that index
 function getRandomFromArray(array) {
     let index = Math.floor(Math.random()*array.length);
