@@ -64,6 +64,8 @@ body {
 
       .mainContainer .inputCont .speechPart .speechInput {
         width: 95%;
+        text-align: center;
+        font-size: 1em;
         flex: 2 0 auto;
       }
 
@@ -115,5 +117,6 @@ body {
     }
     .mainContainer .answerTextCont .answerText {
       width: 100%;  
+      font-size: 1em;
       flex: 1 0 auto;
     }
