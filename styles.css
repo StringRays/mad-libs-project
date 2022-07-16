@@ -1,12 +1,26 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 h1 {
     width: 50%; 
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
 }
 
-button {
-    margin-top: 20px;
+label {
+  font-weight: bold;
+  text-align: center;
+}
+
+input {
+  width: 100%;
 }
 
 .mainContainer {
@@ -17,98 +31,57 @@ button {
     border: 1px solid black;
     border-radius: 10px;
     background-color: lightgreen;
-    margin: 0 auto;
+    min-height: 90vh;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
     padding: 20px;
-    box-sizing: border-box;
   }
 
-.verbInputCont {
+  .mainContainer .inputCont {
+    flex-basis: auto;
+    flex-grow: 1;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-.verbInput {
-    box-sizing: border-box;
-    width: 100%;
-  } 
+    .mainContainer .inputCont .speechPart {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 20px;
+    }
 
-.adjectiveInputCont {
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .mainContainer .inputCont .buttonRow {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
 
-.adjectiveInput {
-    box-sizing: border-box;
-    width: 100%;
-  } 
-  
-.nounInputCont {
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-.nounInput {
-    box-sizing: border-box;
-    width: 100%;
-  } 
-
-.adverbInputCont {
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-.adverbInput {
-    box-sizing: border-box;
-    width: 100%;
-  } 
+    .mainContainer .inputCont .buttonRow .button {
+      display: inline-flex;
+      padding: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
 
 .answerTextCont {
+    flex-basis: auto;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-.answerText {
-    box-sizing: border-box;
-    width: 100%;
-    height: 480px;
-    text-align: center;
-  } 
-
-.buttonRow {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 10px;
-}
-  
-  .leftbutton {
-    display: inline-block;
+  .answerTextCont .answerText {
+    flex: 1 1 400px;
   }
-
-  .rightbutton {
-    display: inline-block;
-  }
-
-label {
-    display: block;
-    text-align: center;
-    font-weight: bold;
-  }
-
-input {
-    width: 100%;
-    display: block;
-    margin: auto;
-  }
+ 

@@ -7,35 +7,37 @@
   <body>
     <script src="./index.js"></script>
     <div class="mainContainer">
+      <div class="inputCont">
         <h1>Mad Libs Generator</h1>
-        <div class="nounInputCont">
+        <div class="speechPart">
             <label for="nounInput">Nouns</label>
             <input type="text" size="10" class="nounInput" id="nounInput" />
         </div>
-        <div class="verbInputCont">
+        <div class="speechPart">
             <label for="verbInput">Verbs</label>
             <input type="text" size="10" class="verbInput" id="verbInput" />
         </div>
-        <div class="adjectiveInputCont">
+        <div class="speechPart">
             <label for="adjectiveInput">Adjectives</label>
             <input type="text" size="10" class="adjectiveInput" id="adjectiveInput" />
         </div>
-        <div class="adverbInputCont">
+        <div class="speechPart">
             <label for="adverbInput">Adverbs</label>
             <input type="text" size="10" class="adverbInput" id="adverbInput" />
         </div>
         <div class="buttonRow">
-          <button type="button" class="leftButton" onclick="printMadLib()">
+          <button type="button" class="button" onclick="printMadLib()">
             Make Mad Lib
           </button>
-          <button type="button" class="rightButton" onclick="clearText()">
+          <button type="button" class="button" onclick="clearText()">
             Clear
           </button>
         </div>
-        <div class="answerTextCont">
-            <label for="answerText">Answer</label>
-            <input type="text" size="10" class="answerText" id="answerText" />
-        </div>
+      </div>
+      <div class="answerTextCont">
+          <label for="answerText">Answer</label>
+          <input type="text" size="10" class="answerText" id="answerText" />
+      </div>
       </div>
     </div>
   </body>
