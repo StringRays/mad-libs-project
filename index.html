@@ -8,22 +8,24 @@
     <script src="./index.js"></script>
     <div class="mainContainer">
       <div class="inputCont">
-        <h1>Mad Libs Generator</h1>
-        <div class="speechPart">
-            <label for="nounInput">Nouns</label>
-            <input type="text" size="10" class="nounInput" id="nounInput" />
+        <div class="heading">
+          <h2>Mad Libs Generator</h2>
         </div>
         <div class="speechPart">
-            <label for="verbInput">Verbs</label>
-            <input type="text" size="10" class="verbInput" id="verbInput" />
+            <label class="speechLabel" for="nounInput">Nouns</label>
+            <input type="text" size="10" class="speechInput" id="nounInput" />
         </div>
         <div class="speechPart">
-            <label for="adjectiveInput">Adjectives</label>
-            <input type="text" size="10" class="adjectiveInput" id="adjectiveInput" />
+            <label class="speechLabel" for="verbInput">Verbs</label>
+            <input type="text" size="10" class="speechInput" id="verbInput" />
         </div>
         <div class="speechPart">
-            <label for="adverbInput">Adverbs</label>
-            <input type="text" size="10" class="adverbInput" id="adverbInput" />
+            <label class="speechLabel" for="adjectiveInput">Adjectives</label>
+            <input type="text" size="10" class="speechInput" id="adjectiveInput" />
+        </div>
+        <div class="speechPart">
+            <label class="speechLabel" for="adverbInput">Adverbs</label>
+            <input type="text" size="10" class="speechInput" id="adverbInput" />
         </div>
         <div class="buttonRow">
           <button type="button" class="button" onclick="printMadLib()">
@@ -35,9 +37,11 @@
         </div>
       </div>
       <div class="answerTextCont">
-          <label for="answerText">Answer</label>
-          <input type="text" size="10" class="answerText" id="answerText" />
-      </div>
+          <label class="answerLabel for="answerText">Answer</label>
+          <div class="answerTextFlex">
+            <textarea class="answerText" id="answerText"></textarea>
+          </div>  
+        </div>
       </div>
     </div>
   </body>
