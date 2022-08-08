@@ -40,6 +40,7 @@ function getVerb() {
 
 function getNoun() {
     let nounString= document.getElementById("nounInput").value;
+    console.log(nounString)
     if (/[a-z]+/gi.test(nounString) === true) {
         let nounArray = nounString.match(/[a-z]+/gi);
         return getRandomFromArray(nounArray);
